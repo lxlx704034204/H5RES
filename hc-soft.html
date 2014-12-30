@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="help">
+        <div id="box-top" class="box-top">
+            <header id="header">
+                <h1>软件下载</h1>
+                <a class="goBack" href="help.html"></a>
+            </header>
+        </div>
+        <section class="box-accordion">
+        	<div class="menu-item">股票交易软件<i></i></div>
+            <div class="menu-detail">
+            	<h3 class="first">采用上市公司《恒生电子》专业股票交易软件 HOMS</h3>
+                <p class="red3">请按照开户信息选择相应的软件版本</p>
+                <dl class="download mt10" style="background:#649ED8;">
+                	<dt><img src="images/icon-iphone.png" width="22" height="26" style="margin-right:8px;">iPhone版下载</dt>
+                    <dd>
+                		<a href="" target="_blank">iPhone版下载</a>
+                        <a href="" target="_blank">Android版下载</a>
+                    </dd>
+                </dl>
+                <dl class="download mt20 mb20" style="background:#68AE5E;">
+                	<dt><img src="images/icon-android.png" width="22" height="26" style="margin-right:8px;">Android版下载</dt>
+                    <dd>
+                		<a href="" target="_blank">iPhone版下载</a>
+                        <a href="" target="_blank">Android版下载</a>
+                    </dd>
+                </dl>
+            	<p>恒生电子（股票交易代码：600570）是中国最专业的证券交易系统服务商，其系统与各大证券公司进行了无缝对接。</p>
+                <p>赢在投资与恒生电子股份有限公司强强联合，为客户提供更加专业、高效、安全的投资管理服务。赢在投资的客户可通过下载恒生电子提供的客户端进行股票交易，交易单子通过恒生电子交易系统实时进入合作券商在市场上成交。</p>
+            	<h3>我们的交易全部通过《恒生电子交易系统》下单到以下合作券商</h3>
+                <img src="images/qs_icon.gif">
+                <p>您的每笔挂单都能在 <span class="orange">Level2行情软件</span> 中查询到，保证交易的真实性和及时性。</p>
+            </div>
+        </section>
+    </article>
+    <script>
+    $(function(){
+		$('.menu-item').click(function(){
+			if($(this).hasClass('on')){
+				$(this).removeClass('on');
+				$(this).next('.menu-detail').hide();
+			}else{
+				$(this).addClass('on').siblings().removeClass('on');
+				$('.menu-detail').hide();
+				$(this).next('.menu-detail').show();
+			}
+		});
+		$('.menu-item').first().click();
+	});
+    </script>
+</body>
+</html>

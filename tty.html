@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="tty">
+    	<div id="box-top" class="box-top">
+            <header id="header">
+                <h1>天天赢</h1>
+                <a class="goBack" href="index.html"></a>
+                <a class="rightBox" href="hc-tty.html">规则</a>
+            </header>
+        </div>
+        <!--
+        <section>
+            <div class="banner">
+            	<img src="images/tty/banner.jpg" width="100%" height="100%">
+            </div>
+            <div class="txtStatistics" st="on"><em>1.94</em> 万位 操盘精英已累计赚取 <em>5</em> 亿 <em>5956</em> 万元</div>
+        </section>
+        -->
+        <div class="box-tab-white">
+        	<p class="curr">选择金额</p>
+            <p>其他金额</p>
+        </div>
+        <div class="line"><span class="red1">短线狙击、最高20万、可操盘2-30天</span></div>
+        <section class="chooseMoney">
+        	<div class="title bTitle">
+            	申请实盘资金
+            </div>
+            <div class="box-choose">
+                <ul class="chooseItem clearfix">
+                    <li class="curr">2000</li>
+                    <li>3000</li>
+                    <li>5000</li>
+                    <li>1万</li>
+                    <li>2万</li>
+                    <li>3万</li>
+                    <li>5万</li>
+                    <li>10万</li>
+                    <li>20万</li>
+                    <li>30万</li>
+                    <li>50万</li>
+                    <li>100万</li>
+                </ul>
+                <div class="chooseInput hide">
+                	<div class="ui-inp">
+                		<input type="text" placeholder="最少2000，最多20万">
+                    </div>
+                </div>
+                <div class="notice"><span class="red2">操盘须知：</span>投资沪深A股，仓位不限制</div>
+            </div>
+            <div class="title">选择风险保证金</div>
+            <ul class="chooseLine s0">
+            	<li>133</li>
+                <li>133</li>
+                <li class="curr">133</li>
+            </ul>
+            <div class="grey1" style="padding:15px 5px;">账户管理费：<span class="red1"><b>3</b>元 / 天</span> （按天收取，周末节假日免费）</div>
+            <div class="warnLine">
+            	<p>总操盘资金：<font color="#EB4B32"><b class="fs18">2,200</b>元</font></p>
+                <p>亏损警戒线：<font color="#52B846"><b class="fs18">2,100</b>元</font></p>
+                <p>亏损平仓线：<font color="#52B846"><b class="fs18">2,060</b>元</font></p>
+            </div>
+        </section>
+        <div id="box-bottom" class="box-bottom">
+            <footer id="footer">
+            	<ul>
+                	<li><a href="tty1.html"><img src="images/btn-icon-go.png">我要操盘</a></li>
+                </ul>
+            </footer>
+        </div>
+    </article>
+    <script>
+    $(function(){
+		$('.chooseItem>li').click(function(){
+			$(this).addClass("curr").siblings().removeClass('curr');
+		});	
+		$('.chooseLine>li').click(function(){
+			$(this).addClass("curr").siblings().removeClass('curr');
+		});
+		$('.box-tab-white p').click(function(){
+			$(this).addClass("curr").siblings().removeClass('curr');
+			var i = $(this).index();
+			if(i==0){
+				$('.bTitle').text('申请实盘资金');
+				$('.chooseItem').show();
+				$('.chooseInput').hide();
+			}else if(i==1){
+				$('.bTitle').text('请输入您需要多少实盘资金');
+				$('.chooseItem').hide();
+				$('.chooseInput').show();
+			}
+		});
+	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="pz">
+    	<div id="box-top" class="box-top">
+            <header id="header">
+                <h1>周周盈</h1>
+                <a class="goBack" href="zzy.html"></a>
+                <a class="rightBox" href="hc-zzy.html">规则</a>
+            </header>
+        </div>
+        <section class="chooseMoney">
+        	<div class="ft grey1">
+            	支付风险保证金(元)：
+                <div class="fr"><b class="fs20 red3">20,000</b></div>
+            </div>
+            <!-- -->
+            <div class="ft dkq mb20">
+            	<label><input type="checkbox"> 使用配资抵扣券：</label>
+                <div class="fr"><b class="fs18">-300</b>元</div>
+            </div>
+            
+            <div class="ft bb bt grey1">
+            	总共需支付(元)
+                <div class="fr"><span class="red3 fs16">2000</span></div>
+            </div>
+            <div class="trans-time grey1">
+            	开始交易时间 <i class="icon-info"></i>
+                <ul>
+                	<li class="curr">今天</li>
+                    <li>下一个交易日</li>
+                </ul>
+            </div>
+            <div class="mt30 pl5 grey1">申请操盘，意味着您已同意<a href="" class="red3">《周周盈合作操盘协议》</a></div>
+        </section>
+        <div id="box-bottom" class="box-bottom">
+            <footer id="footer">
+            	<ul>
+                	<li><a href="scheme.html"><img src="images/btn-icon-ok.png">确定操盘</a></li>
+                </ul>
+            </footer>
+        </div>
+    </article>
+    <script>
+    $(function(){
+		$('.trans-time li').click(function(){
+			$(this).addClass("curr").siblings().removeClass('curr');
+		});	
+		$('.icon-info').tap(function(){
+			var t = '1、交易时间交易时间交易时间交易时间交易时间交易时间<br>2、交易时间交易时间交易时间交易时间交易时间交易时间交易时间';
+			X.dialog.alert(t,{title:'交易时间',btn:'知道了'});
+		});
+	});
+    </script>
+</body>
+</html>

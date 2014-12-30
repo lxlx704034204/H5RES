@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="charge">
+        <div id="box-top" class="box-top">
+            <header id="header">
+                <h1>支付宝转账</h1>
+                <a class="goBack" href="charge-alipay.html"></a>
+            </header>
+        </div>
+        <div class="myAliPay">
+        	<p>收款人支付宝账户：</p>
+            <p class="fs24 pt5 pb5">chenqianyztz@gmail.com</p>
+            <p>臣乾金融信息服务（上海）有限公司</p>
+        </div>
+        <section class="box-content"> 
+        	<div class="pt15 pl5 grey">充值金额：<span class="red3"><b class="fs16">16</b>元</span></div>
+            <div class="pt5 pl5"><span class="grey">您的支付宝账户：</span>asdfasdf@163.com</div>
+            <div class="ali-info">
+            	<a href="">
+                	请打开支付宝钱包完成转账
+                </a>
+                <a href="">
+                	去支付宝网站完成转账
+                </a>
+                <i style=" background:#BFB9B5; position:absolute; top:137px; left:50%; margin-left:-13px; text-align:center; border-radius:13px; width:26px; height:26px; line-height:26px; color:#FFF;">OR</i>
+                <i class="icon-info"></i>
+            </div>
+        </section>
+    </article>
+    <script>
+    $(function(){
+		$('.icon-info').tap(function(){
+			var a = '1. 请牢记 chenqianyztz@gmail.com 账号<br>2. 登录您的支付宝，选择 <b>转账</b> > <b>转账到支付宝</b> 输入我们的账号和您刚才的金额';
+			X.dialog.alert(a,{title:'如何转账',btn:'知道了'});
+		});
+	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="index">
+        <div id="box-top" class="box-top">
+            <header id="header">
+                <h1>赢在投资</h1>
+                <a class="rightBox" href="help.html">新手引导</a>
+            </header>
+        </div>
+        <div class="banner">
+        	<a href=""><img src="images/banner.jpg" width="100%" height="100%"></a>
+        </div>
+        <div class="txtStatistics"><em>1.94</em> 万位 投资人累计配资 <em>5</em> 亿 <em>5956</em> 万元</div>
+        <div class="line"><span><img src="images/line-txt.png"></span></div>
+        <section class="products">
+        	<a href="tty.html" class="product tty">
+            	<h3>天天赢</h3>
+                <p class="ft13">短线神器，我出资金，您来炒股</p>
+                <p class="grey">最高 300 万，可操作 2-30 天<br>15 倍杠杆，15 倍利润</p>
+            </a>
+            <a href="zzy.html" class="product zzy">
+                <h3>周周盈</h3>
+                <p class="ft13">股神宝器，零费用，无压力！</p>
+                <p class="grey">最高 300 万，可操作 1 周<br>资金免费，盈利 7 成归您</p>
+            </a>
+            <a href="pz.html" class="product pz">
+                <h3>股票配资</h3>
+                <p class="ft13">炒股利器，一个涨停，大赚60%</p>
+                <p class="grey">最高 600 万，可投资 1-6 个月<br>6 倍杠杆，6 倍利润</p>
+            </a>
+            <a href="free.html" class="product exp">
+                <h3>免费体验</h3>
+                <p class="grey">赠送2000元实盘资金，盈利全归您<br>亏损算我们</p>
+            </a>
+            <a href="match.html" class="product match">
+                <h3>实盘大赛</h3>
+                <p class="grey">免费提供1亿元操盘资金，盈利全归您<br>还有万元大奖等你来拿</p>
+            </a>
+        </section>
+        <section class="gp">
+        	<ul>
+            	<li>
+                	<p>上证指数</p>
+                    <p class="fs16 gp_u">2338.91  +0.30%</p>
+                </li>
+                <li>
+                	<p>深证成指</p>
+                    <p class="fs16 gp_d">7962.86  +0.53%</p>
+                </li>
+            </ul>
+        </section>
+        <div class="line">
+        	<ul class="box-tab">
+            	<li class="curr">操盘达人</li>
+                <li>今日限制股</li>
+            </ul>
+        </div>
+        <section class="master">
+            <ul>
+            	<li>
+                    <h3>枪手2014</h3>
+                    <p>股票配资 - 45万元 实盘资金</p>
+                    <p>1月斩获 112%，盈利 16.8万元</p>
+                </li>
+                <li>
+                    <h3>枪手2014</h3>
+                    <p>股票配资 - 45万元 实盘资金</p>
+                    <p>1月斩获 112%，盈利 16.8万元</p>
+                </li>
+                <li>
+                    <h3>枪手2014</h3>
+                    <p>股票配资 - 45万元 实盘资金</p>
+                    <p>1月斩获 112%，盈利 16.8万元</p>
+                </li>
+            </ul>
+        </section>
+        <section class="limitStock hide">
+        	<ul class="clearfix">
+            	<li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+                <li>600725　云维股份</li>
+            </ul>
+        </section>
+        <div id="box-bottom" class="box-bottom">
+            <footer id="footer">
+                <ul class="esp">
+                    <li class="home">
+                        <a href="index.html" class="curr">首页</a>
+                    </li>
+                    <li class="tty">
+                        <a href="tty.html">天天赢</a>
+                    </li>
+                    <li class="pz">
+                        <a href="pz.html">股票配资</a>
+                    </li>
+                    <li class="user">
+                        <a href="uc-index.html">我的帐户</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </article>
+    
+    <script>
+    $(function(){
+		$('.box-tab li').tap(function(){
+			$(this).addClass('curr').siblings().removeClass('curr');
+			var i = $(this).index();
+			if(i==0){
+				$('.limitStock').hide();
+				$('.master').show();
+			}else{
+				$('.master').hide();
+				$('.limitStock').show();
+			}
+		});
+	});
+    </script>
+</body>
+</html>

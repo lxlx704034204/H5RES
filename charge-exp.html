@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article id="charge">
+        <div id="box-top" class="box-top">
+            <header id="header">
+                <h1>快捷支付</h1>
+                <a class="goBack" href="charge.html"></a>
+            </header>
+        </div>
+        <div class="pt10 pb10 pl10 bb">
+        	账户余额：<span class="red3"><b class="fs16">16</b>元</span>
+        </div>
+        <section class="box-content"> 
+        	<div class="exp-title">无需开通网银，有银行卡就能支付</div>
+            <div class="pt10 pl5"><span class="grey1">持卡人姓名：</span>曹升</div>
+            <div class="title">选择快捷支付银行</div>
+            <div class="ui-inp">
+            	<div id="otherBank" class="r-poinfo" style="right:10px; font-size:0;"><img src="images/icon-card.png" width="32" height="25"></div>
+                <div class="bank-info">中国建设银行</div>
+            </div>
+            <div class="title">储蓄卡卡号 <i class="icon-info"></i></div>
+            <div class="ui-inp">
+            	<input id="cardNO" type="number">
+            </div>
+            <!--
+            <div class="title">快捷支付银行</div>
+            <div class="exp-bind-bank">
+                <dl class="ccb">
+                    <dt>中国建设银行</dt>
+                    <dd>6227 **** **** **** 289</dd>
+                </dl>
+            </div>
+            -->
+            <div class="title">充值金额</div>
+            <div class="ui-inp">
+            	<div class="r-poinfo">元</div>
+            	<input id="money" type="number">
+            </div>
+            <p class="pt10 pl10 red3">单卡单笔限额5万，每日限额20万</p>
+            <p class="pt10 pl10">充值手续费：<b>0</b>元</p>
+            <div class="pt20">
+            	<input type="button" value="下一步" class="ui-btn ui-btn-red" onClick="location.href='forget1.html';">
+            </div>
+        </section>
+        
+    </article>
+    <script>
+    $(function(){
+		$('.icon-info').tap(function(){
+			var a = '使用快捷支付成功充值后，将绑定该卡成为唯一的快捷支付卡和提款卡；如需修改银行卡请联系客服：4008-270-866';
+			X.dialog.alert(a,{title:'绑定银行卡，实行同卡进出',btn:'知道了'});
+		});
+		$("#otherBank").click(function(){
+			window.location.href='choosebank.html';
+		});
+	});
+    </script>
+</body>
+</html>

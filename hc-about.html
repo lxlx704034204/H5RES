@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="赢在投资，一起牛逼" />
+<meta http-equiv="cleartype" content="on" />
+<script>
+document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
+</script>
+<script language="javascript" src="js/lib/zepto.min.js"></script>
+<script language="javascript" src="js/yztz.js"></script>
+<title>首页-赢在投资触屏版</title>
+</head>
+
+<body>
+	<article>
+        <div id="box-top" class="box-top">
+            <header id="header">
+                <h1>关于我们</h1>
+                <a class="goBack" href="uc-index.html"></a>
+            </header>
+        </div>
+        <section class="box-accordion">
+        	<div class="menu-item">公司简介<i></i></div>
+            <div class="menu-detail">
+            	<p>赢在投资（www.yztz.com）系臣乾金融信息服务（上海）有限公司独立品牌。赢在投资于2013年3月18日上线，是全国首家网上配资平台（网上配资行业领袖），也是首批响应国家金融创新号召，注册在上海自贸区的金融创新企业，注册资本8000万元人民币。</p>
+                <h3>精英团队，只为中国金融的明天</h3>
+                <p>赢在投资由多位证劵、金融、私募领域的资深专家，以及互联网精英团队共同组建而成。丰富的金融知识和经验，遇上极致互联网产品体验，让我们立志于从“心”打造一家真正有利于投资人的高效配资平台。</p>
+                <h3>让资本与机会约会</h3>
+                <p>赢在投资网上配资平台区别于传统线下配资公司或个人，我们把极致的互联网体验带入到配资，摆脱了传统线下模式中：超高的利息、地域的限制、繁杂的操作、低效死板的风控，从而实现了资本与投资机会的高效整合。</p>
+            	<h3>资质证书</h3>
+                <p class="box-flex">
+                	<a href="images/zs/zs1.jpg" class="box-flex-item"><img src="images/zs1.png" width="100%" height="76"></a>
+                    <a href="images/zs/zs2.jpg" class="box-flex-item"><img src="images/zs2.png" width="100%" height="76"></a>
+                    <a href="images/zs/zs3.jpg" class="box-flex-item"><img src="images/zs3.png" width="100%" height="76"></a>
+                </p>
+            </div>
+            <div class="menu-item">联系我们<i></i></div>
+            <div class="menu-detail">
+            	<h3 class="first">上海总部</h3>
+                <p>地址：上海自由贸易试验区泰谷路18号2幢524室</p>
+                <p>邮编：200000</p>
+                <h3>杭州分部</h3>
+                <p>地址：杭州滨江区滨盛路银丰大厦1801室</p>
+                <p>邮编：310000</p>
+                <h3>客服电话</h3>
+                <p>如果您在使用赢在投资的过程中有任何疑问，请与客服人员联系。</p>
+                <p>客服电话：4008-270-866</p>
+                <h3>媒体采访</h3>
+                <p>如果有媒体采访需求，请将您的媒体名称、采访提纲、联系方式发至：</p>
+                <p>pr@yztz.com，我们会尽快与您联系。</p>
+                <h3>商务合作</h3>
+                <p>如果贵公司希望与我们建立商务合作关系，形成优势互补，请将合作意向进行简要描述并发送邮件至：</p>
+                <p>bd@yztz.com，我们会尽快与您联系。</p>
+            </div>
+        </section>
+    </article>
+    <script>
+    $(function(){
+		$('.menu-item').click(function(){
+			if($(this).hasClass('on')){
+				$(this).removeClass('on');
+				$(this).next('.menu-detail').hide();
+			}else{
+				$(this).addClass('on').siblings().removeClass('on');
+				$('.menu-detail').hide();
+				$(this).next('.menu-detail').show();
+			}
+		});
+		$('.menu-item').first().click();
+	});
+    </script>
+</body>
+</html>
