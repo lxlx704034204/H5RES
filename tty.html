@@ -39,7 +39,7 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
             <p>其他金额</p>
         </div>
         <div class="line"><span class="red1">短线狙击、最高20万、可操盘2-30天</span></div>
-        <section class="chooseMoney">
+        <section class="chooseMoney" style="padding:0 10px;">
         	<div class="title bTitle">
             	申请实盘资金
             </div>
@@ -72,10 +72,15 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
                 <li class="curr">133</li>
             </ul>
             <div class="grey1" style="padding:15px 5px;">账户管理费：<span class="red1"><b>3</b>元 / 天</span> （按天收取，周末节假日免费）</div>
-            <div class="warnLine">
-            	<p>总操盘资金：<font color="#EB4B32"><b class="fs18">2,200</b>元</font></p>
-                <p>亏损警戒线：<font color="#52B846"><b class="fs18">2,100</b>元</font></p>
-                <p>亏损平仓线：<font color="#52B846"><b class="fs18">2,060</b>元</font></p>
+            <div class="warnLine clearfix">
+            	<div class="fr">
+                    <p>总操盘资金：<font color="#EB4B32"><b class="fs18">2,200</b>元</font></p>
+                    <p>亏损警戒线：<font color="#52B846"><b class="fs18">2,100</b>元</font></p>
+                    <p>亏损平仓线：<font color="#52B846"><b class="fs18">2,060</b>元</font></p>
+                </div>
+                <div class="fr" style="margin-top:40px; width:14px; height:28px; border-top:1px solid #E3DED8; border-left:1px solid #E3DED8; border-bottom:1px solid #E3DED8;">
+                	<i class="icon-info tipInfo1"></i>
+                </div>
             </div>
         </section>
         <div id="box-bottom" class="box-bottom">
@@ -106,6 +111,12 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$('.chooseItem').hide();
 				$('.chooseInput').show();
 			}
+		});
+		$('.tipInfo1').css({'-webkit-transform':'translate(-9px,4px)','background-color':'#F6F1EA'}).tap(function(){
+			var s = new Text();
+			s._('<div><b>警戒线：</b>当总操盘资金低于警戒线时，<span class="red3">只能平仓不能建仓</span>，需要尽快追加风险保证金，以免低于亏损平仓线被平仓。</div>');
+			s._('<div class="pt10"><b>平仓线：</b>当总操盘资金低于平仓线时，<span class="red3">我们将有权把您的股票进行平仓</span>，为避免平仓发生，请时刻关注风险保证金是否充足。</div>');
+			X.dialog.alert(s.ts(),{title:'警戒线与平仓线',btn:'知道了'});
 		});
 	});
     </script>

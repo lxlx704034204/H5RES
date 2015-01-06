@@ -82,7 +82,8 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 			$('#total').text(day*2000);
 		});
 		$('.tipInfo1').tap(function(){
-			var t = '1、账户管理费会先存入到您的账户，<span class="red3">使用一天扣一天，周末节假日免费。</span><br>2、如账户余额充足，<span class="red3">默认每天自动延期</span>，扣除当天管理费，否则自动终止。';
+			var t = '<div>天天赢账户管理费是从您账户余额里扣取，<span class="red3">使用一天扣一天，周末节假日免费。</span>如账户余额充足，天天赢<span class="red3">默认每天自动延期</span>，扣除当天管理费，否则自动终止。</div>';
+			t+='<div class="pt10 grey2">小技巧：可多存几天的费用，免去每天充值续费的麻烦</div>';
 			X.dialog.alert(t,{title:'账户管理费',btn:'知道了'});
 		});
 		$('.tipInfo2').tap(function(){

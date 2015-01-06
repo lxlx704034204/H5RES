@@ -160,9 +160,9 @@ X.dialog={
 		}
 		s._('<div class="db-content">')._(msg)._('</div>');
 		s._('<div class="db-foot">');
-		t.addBtn(s,ps.btn,1);
 		if(ps.cfm)
 			t.addBtn(s,ps.btn1,2);
+		t.addBtn(s,ps.btn,1);
 		s._('</div>');
 		t.open(s.ts(),ps);
 	},

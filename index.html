@@ -138,7 +138,42 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$('.limitStock').show();
 			}
 		});
+		f3();
 	});
+	function f1(){
+		var s = new Text();
+		s._('<table class="table-wrap">');
+		s._('<tr><td>借款金额/时间</td><td>1-2个月</td><td>3-4个月</td></tr>');
+		s._('<tr><td>10万以下</td><td>1.9分</td><td>1.8分</td></tr>');
+		s._('<tr><td>10万-100万以下</td><td>1.8分</td><td>1.7分</td></tr>');
+		s._('<tr><td>100万或以上</td><td>1.7分</td><td>1.6分</td></tr>');
+		s._('</table>');
+		s._('<div class="tip-txt pt10">注：月利率1.6分，就是每月支付借款资金的1.6%的利息。如借款1万，每月利息为160元。</div>');
+		X.dialog.alert(s.ts(),{title:'借款基础月利率表',btn:'知道了'});
+	}
+	function f2(){
+		var s = new Text();
+		s._('<div class="l-r-wrap b-grey">');
+		s._('账户余额(元)：<div class="black fs16">1,093,232.89</div>')
+		s._('</div>')
+		s._('<div class="l-r-wrap">');
+		s._('本次支付(元)：<div class="red3 fs14">3,232.89</div>')
+		s._('</div>')
+		X.dialog.confirm(s.ts(),{title:'确认支付'});
+	}
+	function f3(){
+		var s = new Text();
+		s._('<div class="">');
+		s._('申请续约后，我们会进行审核，但不保证续约一定成功')
+		s._('</div>')
+		s._('<div class="l-r-wrap bt mt10">');
+		s._('<b class="fs16 black">1个月</b><div>续约到：2014/01/01</div>')
+		s._('</div>')
+		s._('<div class="l-r-wrap bt">');
+		s._('支付利息：<span class="red3"><b class="fs14">120</b>元/月</span>')
+		s._('</div>')
+		X.dialog.confirm(s.ts(),{title:'方案续约'});
+	}
     </script>
 </body>
 </html>
