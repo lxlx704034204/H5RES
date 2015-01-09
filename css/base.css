@@ -40,6 +40,7 @@ ins, a { text-decoration: none }
 .grey, .chooseMoney .notice, #bank .bank-list p, .txt-step dd, .box-succ dd { color: #999999; }
 .grey1, #scheme .money dt, .warnLine p, .list-item li:nth-child(3){ color:#666;}
 .grey2{ color:#AAA;}
+.silver{ color:#E6A8AA;}
 .red { color: #CC3441; }
 .red1, .gp_u { color: #EC4127; }
 .red2, .chooseMoney .notice span { color: #FF9966; }
@@ -350,10 +351,10 @@ ins, a { text-decoration: none }
 #scheme .pic-step{ margin:0 80px;}
 #scheme .txt-step{ margin:0 80px;}
 #schemeList dl.rightInfo{ min-width:100px;}
-.box-loss{ background:#FFF; border-top:1px solid #EEEBE8; display:-webkit-box; padding:10px; margin-top:10px;}
-.box-loss div:first-child{ -webkit-box-flex: 1; width: 1px; display: block; height:34px; line-height:34px; color:#999;}
-.box-loss div:last-child{ width:90px;}
-.box-loss div:last-child a{ height:34px; line-height:34px; font-size:12px;}
+.box-loss-wrap{ height:65px;}
+.box-loss{ position:fixed; bottom:0; left:0; right:0; height:54px; line-height:54px; color:#999; background:#FFF; border-top:1px solid #EEEBE8; padding:0 10px;}
+.box-loss .loss-out{ position:absolute; right:10px; bottom:0; width:90px;}
+.box-loss .loss-out a{ height:34px; line-height:34px; font-size:12px;}
 
 #msg .box-wrap dl{ padding:8px 0px 8px 40px;}
 #msg .box-wrap dl.ques{ background:url(../images/userHead.png) 0px 15px no-repeat; background-size:30px 30px;}

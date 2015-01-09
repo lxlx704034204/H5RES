@@ -35,9 +35,7 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
         	<div class="box-wrap mt20">
             	<h2>分享给好友赚取佣金</h2>
             	<p>我正在这里进行股票配资炒股，15倍杠杆15倍利润，一个涨停就赚150%，独乐乐不如众乐乐，赶紧来看看吧！<br>http://www.yztz.com/?u=677692</p>
-                <div>
-                	<input type="button" class="ui-btn ui-btn-red" value="马上推广">
-                </div>
+                <div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_iguba" data-cmd="iguba" title="分享到股吧"></a></div>
             </div>
             <div class="list-title">如何赚钱</div>
             <p class="pt10 pb10 pl5">所有通过您的推广链接访问过来的用户，注册后都将成为您的下线用户，而当这些用户在本站配资时，您就可以赚取服务费14%的佣金。我们已向所有推广员发放了几千万元的佣金。</p>
@@ -46,7 +44,6 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
             </div>
             <div class="list-title">佣金怎么结算</div>
             <p class="pt10 pl5">您的用户每发生一笔配资，您就立马获得一笔佣金，当您的佣金到达10元时，您就可以随时兑换并取出，当然也可以在本站进行配资。</p>
-            
             <div class="title">推广佣金榜</div>
             <div class="box-list">
             	<ul>
@@ -149,5 +146,25 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 	
 	});
     </script>
+	<script>
+		window._bd_share_config={
+			"common":{
+				"onBeforeClick":functionOnBeforeClick,
+				"bdSnsKey":{"tsina":"tsina","tqq":"tqq","t163":"t163","tsohu":"tsohu"},
+				"bdMini":"2",
+				"bdMiniList":false,
+				"bdPic":"http://www.yztz.com/res/images/bdunion/bdunion.jpg",
+				"bdStyle":"1",
+				"bdSize":"32"
+			},
+			"share":{}
+		};
+		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		function functionOnBeforeClick(cmd,config){
+			config.bdText = "我正在这里进行股票配资炒股，15倍杠杆15倍利润，一个涨停就赚150%，独乐乐不如众乐乐，赶紧来看看吧！";
+			return config;
+		}
+	</script>
+	
 </body>
 </html>
