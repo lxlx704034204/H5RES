@@ -7,33 +7,45 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
-<meta name="description" content="赢在投资，一起牛逼" />
+<meta name="description" content="测试页" />
 <meta http-equiv="cleartype" content="on" />
-<script>
-document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
-</script>
+<style type="text/css">
+	select{
+		width:200px;
+		height:50px;
+		padding:10px;
+		font-size:14px;
+		-webkit-appearance: none;
+	}
+</style>
 <script language="javascript" src="js/lib/zepto.min.js"></script>
-<script language="javascript" src="js/yztz.js"></script>
-<title>首页-赢在投资触屏版</title>
+<title>测试页</title>
 </head>
 
 <body>
-	<article>
-        <div id="box-top" class="box-top">
-            <header id="header">
-                <h1>赢在投资</h1>
-                <a class="rightBox" href="">新手引导</a>
-            </header>
-        </div>
-        <section>
-        	<input type="button" value="AAA" /><br>
-            <input type="checkbox" value="AAA" /><br>
-            <input type="color" value="AAA" /><br>
-            <input type="date" value="AAA" /><br>
-            <select>
-            	<option>AAA</option>
-            </select>
-        </section>
-    </article>
+	<select>
+    	<option>第一页</option>
+        <option>第二页</option>
+        <option>第三页</option>
+        <option>第四页</option>
+        <option>第五页</option>
+        <option>第六页</option>
+    </select>
+<script>
+	document.write('UA:'+navigator.userAgent);
+	document.write('<br><br>$.os.phone='+$.os.phone);
+	document.write('<br>$.os.tablet='+$.os.tablet);
+	document.write('<br>$.os.ios='+$.os.ios);
+	document.write('<br>$.os.android='+$.os.android);
+	
+	document.write('<br><br>$.browser.chrome='+$.browser.chrome);
+	document.write('<br>$.browser.firefox='+$.browser.firefox);
+	document.write('<br>$.browser.safari ='+$.browser.safari );
+	document.write('<br>$.browser.webview ='+$.browser.webview );
+	document.write('<br>$.browser.ie='+$.browser.ie);
+	
+	document.write('<br><br>$.os.version='+$.os.version);
+	document.write('<br>$.browser.version='+$.browser.version);
+</script>
 </body>
 </html>

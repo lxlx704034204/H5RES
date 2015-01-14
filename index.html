@@ -127,7 +127,8 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
     
     <script>
     $(function(){
-		$('.box-tab li').tap(function(){
+		//window.location.href='test.html';
+		$('.box-tab li').click(function(){
 			$(this).addClass('curr').siblings().removeClass('curr');
 			var i = $(this).index();
 			if(i==0){
@@ -138,7 +139,8 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$('.limitStock').show();
 			}
 		});
-		f3();
+		//f3();
+		X.dialog.tips('借款金额');
 	});
 	function f1(){
 		var s = new Text();

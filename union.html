@@ -12,8 +12,8 @@
 <script>
 document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime()+'">');
 </script>
-<script language="javascript" src="js/lib/zepto.min.js"></script>
-<script language="javascript" src="js/yztz.js"></script>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/yztz.js"></script>
 <title>首页-赢在投资触屏版</title>
 </head>
 
@@ -35,6 +35,7 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
         	<div class="box-wrap mt20">
             	<h2>分享给好友赚取佣金</h2>
             	<p>我正在这里进行股票配资炒股，15倍杠杆15倍利润，一个涨停就赚150%，独乐乐不如众乐乐，赶紧来看看吧！<br>http://www.yztz.com/?u=677692</p>
+                <input type="button" class="ui-btn ui-btn-red" id="onMenuShareTimeline" value="ttt">
                 <div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_iguba" data-cmd="iguba" title="分享到股吧"></a></div>
             </div>
             <div class="list-title">如何赚钱</div>
@@ -165,6 +166,84 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 			return config;
 		}
 	</script>
-	
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 如有问题请通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+      debug: true,
+      appId: 'wxf8b4f85f3a794e77',
+      timestamp: 1421130657,
+      nonceStr: 'mVO7jNUylL4RRLaI',
+      signature: '48d3622760c0d5a7d25b3de36a680858f64a149c',
+      jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'translateVoice',
+        'startRecord',
+        'stopRecord',
+        'onRecordEnd',
+        'playVoice',
+        'pauseVoice',
+        'stopVoice',
+        'uploadVoice',
+        'downloadVoice',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'openProductSpecificView',
+        'addCard',
+        'chooseCard',
+        'openCard'
+      ]
+  });
+</script>
+<script>
+// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+  $('#onMenuShareTimeline').click(function () {  
+    wx.onMenuShareTimeline({
+      title: '互联网之子',
+      link: 'http://movie.douban.com/subject/25785114/',
+      imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+      trigger: function (res) {
+        alert('用户点击分享到朋友圈');
+      },
+      success: function (res) {
+        alert('已分享');
+      },
+      cancel: function (res) {
+        alert('已取消');
+      },
+      fail: function (res) {
+        alert(JSON.stringify(res));
+      }
+    });
+  });
+</script>
 </body>
 </html>

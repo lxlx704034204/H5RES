@@ -126,7 +126,7 @@ X.dialog={
 	//db[索引，宽度，高度，信息层，背景层，回调]
 	open:function(content,ps){
 		ps=$.init(ps,{topic:'',width:280,notify:null});
-		var t=this,w=ps.width,bgi=X.zi(),di=X.zi(),db=[di,w],p=X.ps(),ww=p.width,wh=p.height,dl=$.round((ww-w)/2),dt=-30,s=new Text();
+		var t=this,w=ps.width,bgi=X.zi(),di=X.zi(),db=[di,w],p=X.ps(),ww=p.width,wh=p.height,dl=$.round((ww-w)/2),dt=-60,s=new Text();
 		if(dl<10)dl=10;
 		if(content)s._($.replace(content,'#di#',di));
 		db[3]=$.ce('div');

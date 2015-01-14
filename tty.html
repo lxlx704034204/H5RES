@@ -112,7 +112,7 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$('.chooseInput').show();
 			}
 		});
-		$('.tipInfo1').css({'-webkit-transform':'translate(-9px,4px)','background-color':'#F6F1EA'}).tap(function(){
+		$('.tipInfo1').css({'-webkit-transform':'translate(-9px,4px)','-moz-transform':'translate(-9px,4px)','background-color':'#F6F1EA'}).tap(function(){
 			var s = new Text();
 			s._('<div><b>警戒线：</b>当总操盘资金低于警戒线时，<span class="red3">只能平仓不能建仓</span>，需要尽快追加风险保证金，以免低于亏损平仓线被平仓。</div>');
 			s._('<div class="pt10"><b>平仓线：</b>当总操盘资金低于平仓线时，<span class="red3">我们将有权把您的股票进行平仓</span>，为避免平仓发生，请时刻关注风险保证金是否充足。</div>');
