@@ -48,25 +48,43 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
             </div>
             <div class="box-choose">
                 <ul class="chooseItem clearfix">
-                    <li b="1">0</li>
-                    <li b="2">0</li>
-                    <li b="3">0</li>
-                    <li b="4" class="disabled">0</li>
-                    <li b="5" class="disabled">0</li>
-                    <li b="6" class="disabled">0</li>
+                    <li b="1">
+                    	<h3>1000</h3>
+                        <div class="yh">1.0分/月</div>
+                    </li>
+                    <li b="2">
+                    	<h3>1000</h3>
+                        <div class="yh">1.1分/月</div>
+                    </li>
+                    <li b="3">
+                    	<h3>1000</h3>
+                        <div class="yh">1.2分/月</div>
+                    </li>
+                    <li b="4">
+                    	<h3>1000</h3>
+                        <div class="yh">1.3分/月</div>
+                    </li>
+                    <li b="5">
+                    	<h3>1000</h3>
+                        <div class="yh">1.4分/月</div>
+                    </li>
+                    <li b="6" class="disabled">
+                    	<h3>1000</h3>
+                        <div class="yh">1.5分/月</div>
+                    </li>
                 </ul>
                 <div class="notice"><span class="red2">操盘须知：</span>投资沪深A股，仓位有限制<br>主板单股不超总操盘资金的50%(创业板30%)</div>
             </div>
             <div class="title">资金使用期限<span class="fs10">(借款多，期限长，越优惠)</span></div>
             <div class="box-sel">
-            	<div class="r-poinfo"><b id="changeLv" class="fs20">2</b>分/每月利率</div>
-            	<select class="ui-sel">
+            	<div class="r-poinfo" onClick="open($('#ttttt'));"><b id="changeLv" class="fs20">2</b>分/每月利率</div>
+            	<select id="ttttt" class="ui-sel">
                 	<option value="2">1个月</option>
-                    <option value="1.9">2个月</option>
-                    <option value="1.8">3个月</option>
-                    <option value="1.7">4个月</option>
-                    <option value="1.6">5个月</option>
-                    <option value="1.5">6个月</option>
+                    <option value="1.9">2个月 [优惠]</option>
+                    <option value="1.8">3个月 [优惠]</option>
+                    <option value="1.7">4个月 [优惠]</option>
+                    <option value="1.6">5个月 [优惠]</option>
+                    <option value="1.5">6个月 [优惠]</option>
                 </select>
             </div>
             <div class="warnLine mt20">
@@ -99,7 +117,28 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$(element).text(b*m);
             });
 		});
+		showWXTip();
 	});
+	function showWXTip(){
+		var isWX = (navigator.userAgent.indexOf("MicroMessenger") > -1);
+		if(!sessionStorage.getItem('wx-tip')){
+			$("body").append('<div id="loading"></div><div id="wxtip" class="wx-tip" onclick="hideWXTip();"></div>');
+		}
+	}
+	function hideWXTip(){
+		$('#loading').remove();
+		$('#wxtip').remove();
+		sessionStorage.setItem('wx-tip','WXYIP');
+	}
+	function open(elem) {
+		if (document.createEvent) {
+			var e = document.createEvent("MouseEvents");
+			e.initMouseEvent("mousedown");
+			elem[0].dispatchEvent(e);
+		} else if (element.fireEvent) {
+			elem[0].fireEvent("onmousedown");
+		}
+	}
     </script>
 </body>
 </html>

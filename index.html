@@ -139,8 +139,8 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 				$('.limitStock').show();
 			}
 		});
-		//f3();
-		X.dialog.tips('借款金额');
+		f2();
+		//X.dialog.tips('借款金额');
 	});
 	function f1(){
 		var s = new Text();
@@ -175,6 +175,18 @@ document.write('<link rel="stylesheet" href="css/base.css?v='+new Date().getTime
 		s._('支付利息：<span class="red3"><b class="fs14">120</b>元/月</span>')
 		s._('</div>')
 		X.dialog.confirm(s.ts(),{title:'方案续约'});
+	}
+	function f4(){
+		var s = new Text();
+		s._('<div class="grey1">您即将收到来自赢在投资 4008-270-866 的免费电话，请注意接听！</div>');
+		s._('<div class="mt10 mb10 box-flex yy-code">');
+		s._('<div class="box-flex-item"><div class="ui-inp"><input id="code" type="number" min="0" placeholder="语音验证码"></div></div>')
+		s._('<div style="width:110px;"><input type="button" class="ui-btn ui-btn-red" value="获取验证码" disabled></div>')
+		s._('</div>')
+		s._('<div class="grey">');
+		s._('手机号：13777772232')
+		s._('</div>')
+		X.dialog.confirm(s.ts(),{title:'语音验证码'});
 	}
     </script>
 </body>
